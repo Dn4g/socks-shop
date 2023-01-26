@@ -74,4 +74,4 @@
       dest: /home/ubuntu/socks-shop
 
   - name: Start project from Docker file
-    ansible.builtin.command: cd /home/ubuntu/socks-shop && docker-compose up -d
+    ansible.builtin.command: cd /home/ubuntu/socks-shop && docker stack deploy --compose-file docker-compose.yml socks-shop
